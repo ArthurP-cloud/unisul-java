@@ -28,8 +28,7 @@
       // o comando ? possui a mesma função do if, basicamente pode se trocar esta linha por
       // if ( (window.Event)==true) { var whichCode=e.which; } else { var
       whichCode = e.keyCode;
-    }
-    var whichCode = window.Event ? e.which : e.keyCode;
+      var whichCode = window.Event ? e.which : e.keyCode;
     if (whichCode == 13) return true;
     // Valor para do número que foi digitado
     key = String.fromCharCode(whichCode);
@@ -55,8 +54,7 @@
     aux += key;
     //total de números digitados
     len = aux.length;
-    //este bloco adiciona zeros para os primeiros números decimais
-    digitados;
+    //este bloco adiciona zeros para os primeiros números decimais digitados;
     if (len == 0) objTextBox.value = "";
     if (len == 1) objTextBox.value = "0" + SeparadorDecimal + "0" + aux;
     if (len == 2) objTextBox.value = "0" + SeparadorDecimal + aux;
@@ -78,6 +76,8 @@
       objTextBox.value += SeparadorDecimal + aux.substr(len - 2, len);
     }
     return false;
+    }
+    
   </script>
   <body>
     Exemplo de utilização:
