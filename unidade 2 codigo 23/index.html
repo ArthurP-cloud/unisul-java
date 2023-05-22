@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+<title>Validação dos campos</title>
+  <script language="javascript" type="text/javascript">
+    function valida(objeto) {
+      /*a proriedade elements permite acessar todos os objetos existentes
+      em forma de vetor. Assim, podemos colocar todos os objeto dentro de
+      um laço acessando cada um sem saber qual o nome.*/
+      var elementos = objeto.elements;
+      var resp="";
+        for (var i=0; i< elementos.length; i++){
+        /*neste exemplo, estamos validando apenas os campos do tipo text e
+        que tem no atributo que foi criado “obrigatorio” igual a S, assim com
+        uma única função podemos acrescentar vários campos sem necessitar
+        alterar a função*/
+          if ((elementos[i].getAttribute("type")=="text")&&(elementos[i].getAttribute("obrigatorio")=="S")&&(elementos[i].value==””)) {
+          /*style é o objeto referente aos estilos CSS, neste caso
+          estamos trocando a cor de fundo*/
+          elementos[i].style.backgroundColor = "#ffffcc";
+          resp+="O campo "+elementos[i].getAttribute("descr")+" é obrigatorio.\n";
+          }
+        }
+        if (resp!="") {
+          alert(resp);
+          return false;
+        }return true;
+    }
+  </script>
+  </head>
+<body>
+  <!-- usar o return na chamada deste evento significa que se retornar false
+  o browser entende que houve algum problema e não continuará. Se for
+  true, não há problema algum em continuar.-->
+  <form id="form1" name="form1" method="post" action="www.google.com.br" onsubmit="return valida(this)">
+    <p>Nome:
+    <label>
+      <input type="text" name="nome" id="nome" obrigatorio="S" descr="O nome deve ser preenchido"/>
+      </label>
+    </p>
+    <p>Apelido:
+    <label>
+      <input type="text" name="apelido" id="apelido"/>
+    </label>
+    </p>
+    <p> Ano de nascimento
+      <input name="ano" type="text" id="ano" maxlength="4" obrigatorio="S" descr="Ano deve ter especificamente 4 caracteres"/>
+    </p>
+    <p>
+    <label>
+      <input type="submit" name="button" id="button" value="Enviar"/>
+    </label>
+    </p>
+  </form>
+</body>
+</html>

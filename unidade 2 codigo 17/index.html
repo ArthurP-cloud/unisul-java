@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+<title>Exemplo do..while</title>
+</head>
+<body>
+  <script language="javascript" type="text/javascript">
+    var i = 0;
+    while (i<8) {
+      document.write("Intrução while executada vale: "+i+", condição atendida<br>");
+      i++;
+    }
+    i = 0;
+      do {
+        document.write("Intrução do..while executada contador vale: "+i+", condição atendida<br>");
+        i++
+      } while (i<8)
+    document.write("Quando a condição não é atendida<br>Os laços são executados novamente neste exemplo.<br>");
+    document.write("Porém a variável não é zerada, vejamos como se comporta<br><br>");
+    // Condição NÃO é atendida
+      while (i<8) {
+        document.write("Intrução while executada "+i+"ª vez, condição NÃO atendida<br>");
+        i++;
+      }
+      do {
+        document.write("Intrução do..while executada vale: "+i+", condição NÃO atendida<br>");
+        i++
+      } while (i<8)
+  </script>
+</body>
+</html>

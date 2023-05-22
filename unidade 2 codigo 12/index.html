@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"
+/>
+<title>Exemplo de laço de decisão</title>
+</head>
+<body>
+  <script type="text/javascript" language="javascript">
+    function verifica(campo) {
+      if(campo[0].checked) alert("Levar um gurada-chuva");
+      else alert("Deve estar quente!");
+  }
+  </script>
+  <form name="form" id="form">
+  Está chovendo?&nbsp;
+    <p>
+      <label>
+        <input type="radio" name="chuva" value="s" id="chuva_0"
+        />
+        Sim</label>
+        <br />
+      <label>
+        <input type="radio" name="chuva" value="n" id="chuva_1"
+        />
+        Não</label>
+        <br />
+  </p>
+  <input type="button" name="consultar" value="Consultar"
+  onclick="verifica(document.form.chuva)"/>
+  </form>
+</body>
+</html>

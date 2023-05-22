@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://
+www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Exemplo de contra-barra</title>
+</head>
+<body>
+<script language="javascript" type="text/javascript">
+var str="";
+str+="Teste de\bbackspace\n";// - Representa o backspace (caracter ascii 8)
+str+="Tabulação entre\ttextos\n";// - Tabulação (caracter ascii 9)
+str+="quebra de \r parágrafo\n";// – Quebra de parágrafo (caracter ascii 13)
+str+="quebra de\nlinha\n";// – Quebra de linha (caracter ascii 10)
+str+="tabilação\vvertical\n ";// - Tabulação
+//vertical (caracter ascii 11);
+str+="Caracter unicode \u0198\n";/* - Caracter unicode (NNNN representa
+um valor hexadecimal de 0000 a FFFF)*/
+str+="Caracter Asc \x28\n";/* - Caracter ascii (NN representa um valor
+hexadecimal de 00 a FF)*/
+str+='Teste de \'apóstrofo\'\n';// - Apóstrofo
+str+="Teste de \"aspas\"\n";// - Aspas
+str+="Teste de \\barra inversa\n";// - Barra inversa
+alert(str);
+</script>
+</body>
+</html>

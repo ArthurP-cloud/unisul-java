@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Exemplo Objeto This</title>
+</head>
+  <script type="text/javascript" language="javascript">
+    if(btn=true){
+
+      function testedeobjetos(objeto) {
+      alert("Atributo Type: "+objeto.type+"\nAtributo Name: "+objeto.
+      name+"\nAtributo Value: "+objeto.value);
+      }
+    }
+
+  </script>
+<body> 
+  <h1>Ao sair do campo irá emitir um alerta informando alguns atributos
+  de cada campo</h1>
+
+  <form name="form" method="get">
+  Código:&nbsp;<input name="txt_codigo" type="text" value="11"
+  onblur="testedeobjetos(this)" /><br />
+
+  Nome:&nbsp;<input name="txt_nome" type="text" value="Eduardo Campos"
+  onblur="testedeobjetos(this)" /><br />
+
+  Endereço:&nbsp;<input name="txt_endereco" type="text" value="Rua Manoel Ferreira"
+  onblur="testedeobjetos(this)" /><br />
+
+  Complemento:&nbsp;<input name="txt_complemento" type="text"
+  value="Casa 37" onblur="testedeobjetos(this)" /><br />
+  </form>
+</body>
+</html>

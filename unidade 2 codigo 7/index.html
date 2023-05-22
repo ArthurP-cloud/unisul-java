@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://
+www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns=”http://www.w3.org/1999/xhtml”>
+<head>
+<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8” />
+<title>Exemplos objeto Date</title>
+</head>
+<body>
+  <h3>Mostrar o dia da semana</h3>
+    <script type="text/javascript">
+      var d = new Date();
+      var dia = d.getDay();
+      document.write("O número do dia da semana de hoje é "+dia);
+      // Para obtermos o nome do dia, criamos um Array em que Domingo ocupa a
+      // posição 0, segunda ocupa a posição 1, ...
+      var nomesDias=new Array("Domingo","Segunda-feira","Terça-feira","Quartafeira","Quinta-feira","Sexta-feira","Sábado");
+      document.write("<br><br>O nome do dia de hoje é "+nomesDias[dia]);
+    </script>
+  <h3>Obter a hora marcada pelo relógio do seu computador</h3>
+    <script type="text/javascript">
+      var d = new Date();
+      document.write(d.getHours()+" horas ");
+      document.write(d.getMinutes()+" minutos ");
+      document.write(d.getSeconds()+" segundos");
+    </script>
+  <h3>Criar uma data com um valor predefinido</h3>
+    <script type="text/javascript">
+      var data1 = new Date("Fri, 21 Nov 2003 10:43:34 UTC");
+      document.write("A data1 é: "+data1.toLocaleString());
+      document.write("<br><br>");
+      var data2 = new Date(1069411529550);
+      document.write("A data2 é: "+data2.toLocaleString());
+    </script>
+  <h3>Estabelecer o ano para uma data</h3>
+    <script type="text/javascript">
+      var d = new Date();
+      d.setFullYear("1998");
+      document.write(d.toLocaleString());
+    </script>
+  <h3>Escrever a data completa com os nomes do dia e do mês</h3>
+    <script type="text/javascript">
+      var d = new Date();
+      var dia = d.getDay();
+      var mes = d.getMonth();
+      var ano = d.getFullYear();
+      //Para obtermos o nome do dia criamos um Array em que domingo ocupa a
+      //posição 0, segunda ocupa a posição 1, ...
+      var nomesDias=new Array("Domingo","Segunda-feira","Terça-feira","Quartafeira","Quinta-feira","Sexta-feira","Sábado");
+      var nomesMeses=new Array("Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro");
+      var s="Hoje é "+nomesDias[dia]+", "+d.getDate();
+      s+=" de "+nomesMeses[mes]+" de "+ano;
+      document.write(s);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+/>
+<title>Exemplo conversão de dados no Array</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var produto = new Array(45, "Morango", false, 1.25, "Biscoito", "Wafer");
+    document.write("Produto = " + produto);
+    produto[0] = 2;
+    produto[2] = true;
+    produto[6] = "Bolacha";
+    document.write("<br>");
+    document.write("Produto = " + produto);
+
+    document.write("<br>")
+    var numeroDeElementos = produto.length;
+    document.write("Numero de índices no array: "+numeroDeElementos);
+
+    /*A variável ‘numeroDeElementos’ ficará com o valor 7. Entenda
+    que a propriedade length não lê os índices, mas conta o número
+    de elementos no vetor. Lembre-se sempre que índice e tamanho
+    são diferentes.*/
+  </script>
+</body>
+</html>

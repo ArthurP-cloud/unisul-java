@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns=”http://www.w3.org/1999/xhtml”>
+<head>
+<meta http-equiv=”Content-Type” content=”text/html; charset=utf-8”
+/>
+<title>Exemplo Métodos do objeto String</title>
+</head>
+<body>
+  <h3>Propriedade length</h3>
+    <script type="text/javascript">
+      var str="Não há nada melhor que uma cervejinha gelada na sexta à noite."
+      document.write('A String <b> "'+ str + '"</b> possui ')
+      document.write(str.length+" caracteres")
+    </script>
+  <h3>Método IndexOf</h3>
+  <h6>Este exemplo verifica se uma string (variável de texto)
+  contém uma determinada palavra. Se a palavra for
+  encontrada será indicada a posição em que foi localizado o seu
+  primeiro caractere.<br />
+  <b>Nota:</b> A posição do primeiro caractere da string é 0, não é 1. 
+  </h6>
+    <script type="text/javascript">
+      var str="Não há nada melhor que uma cervejinha gelada na sexta à noite.";
+      var pos=str.indexOf("cervejinha ");
+      if (pos>=0) {
+      document.write("a palavra “cervejinha” foi encontrada na posição: ");
+      document.write(pos + "<br>");
+      } else{
+      document.write("a palavra “cervejinha” não foi encontrada!");
+      }
+    </script>
+<h3>Método Match</h3>
+<h6>Este exemplo verifica se uma palavra (que neste
+caso é “gelada”) está contida na string. Se estiver
+ela será devolvida.
+</h6>
+  <script type="text/javascript">
+    var str="Não há nada melhor que uma cervejinha gelada na sexta à noite.";
+    document.write(str.match("gelada"));
+  </script>
+<h3> Método substring</h3>
+  <script type="text/javascript">
+    var str="Não há nada melhor que uma cervejinha gelada na sexta à noite.";
+    document.write("str.substring(27,31) = "+str.substring(27,31));
+    document.write("<br>");
+    document.write("str.substring(27,36)="+str.substring(27,36));
+  </script>
+  <h3>Converte para Maiuscula e Minúscula</h3>
+    <script type="text/javascript">
+      var str="Olá Pessoal do JavaScript!";
+      document.write(str.toLowerCase());
+      document.write("<br>");
+      document.write(str.toUpperCase());
+    </script>
+  </body>
+  </html>

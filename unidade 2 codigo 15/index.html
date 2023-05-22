@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"
+/>
+<title>Exemplo de laço de repetição</title>
+</head>
+  <script language="javascript" type="text/javascript">
+    function validarEntero(valor){
+      valor = parseInt(valor);
+      if (isNaN(valor)) { return ""; } else { return valor; }
+    }
+    function validarFormulario(campo){
+      textoCampo = campo.value;
+      textoCampo = validarEntero(textoCampo);
+      campo.value = textoCampo;
+    }
+    function repete(rept, numero, result) {
+      var repeticoes= rept.value;
+      var inteiro = parseInt(numero.value);
+      var resultado=0;
+
+      for (var i=1;i<=repeticoes;i++)
+      resultado=resultado+(inteiro*repeticoes);
+      result.value=resultado;
+    }
+    </script>
+  <body>
+    <form method="post" name="form1">
+      Digite um número inteiro
+      <input type="text" name="inteiro" value="" onkeyup="validarFormulario(this)" style="text-align:right"/>
+      <br />
+
+      Escolha o número de repetições você deseja
+      <select name="repeticoes" onchange="repete(this,document.form1.inteiro,document.form1.resultado)">
+        <option value="" selected>&nbsp;</option>
+        <option value="1">UM</option>
+        <option value="2">DOIS</option>
+        <option value="3">TRÊS</option>
+      </select>
+      <br />
+
+      Resultado da operação acumulada de (Repetição * Inteiro)<br>
+      <input type="text" name="resultado" value="" style="text-align:right;" readonly="true" />
+    </form>
+</body>
+</html>

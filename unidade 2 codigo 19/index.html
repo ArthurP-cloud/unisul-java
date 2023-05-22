@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN”
+“http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"
+/>
+<title>Exemplo Função com argumentos fixo</title>
+</head>
+  <script type="text/javascript" language="javascript">
+    function autosoma(valor) {
+      var soma=0;
+      do {
+      soma += valor;
+      valor--;
+      } while (valor>0)
+      return soma;
+    }
+    function atribuircampo(campovalor, camporetorno) {
+      camporetorno.value = autosoma(parseInt(campovalor.value));
+    }
+  </script>
+<body>
+  <h1>Função com argumento fixo</h1>
+  <form name="form" method="get">
+    Digite um número: &nbsp;
+    <input type="text" name="txt_valor" id="txt_valor" value="" align="right"/>
+    <input type="button" name="btn_calcular" value="Calcular" onclick="atribuircampo(document.form.txt_valor , document.form.txt_resultado)"/>
+    <br /><br />
+    Resultado:&nbsp;<input type="text" name="txt_resultado" id="txt_resultado" value="" readonly="readonly"/>
+  </form>
+</body>
+</html>

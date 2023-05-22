@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://
+www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+<title>Exemplo de Switch</title>
+</head>
+  <script language="javascript" type="text/javascript">
+    function testacor(campocor) {
+
+      switch (campocor) {
+
+        case "azul":
+        alert("O Azul pode ser usado para escrever um documento");
+        break;
+
+        case "vermelho":
+        alert("O Vermelhor é utilizado em correção");
+        break;
+
+        case "verde":
+        alert("O Verde é utilizado para marcação");
+        break;
+
+        case "amarelo":
+        alert("O Amarelo é utilizado para destacar texto");
+        break;
+
+        default :
+        alert("O Preto é o padrão");
+        break;
+
+      }
+    }
+  </script>
+<body>
+  <form name="form" action="" method="get">
+    Escolha uma cor: &nbsp;
+
+    <select name="cor" onchange="testacor(this.value)">
+
+      <optgroup style="color:#000">
+        <option value="" selected="selected">Preto</option>
+      </optgroup>
+
+      <optgroup style="color:#009">
+        <option value="azul">Azul</option>
+      </optgroup>
+      
+      <optgroup style="color:#F00">
+        <option value="vermelho">Vermelhor</option>
+      </optgroup>
+
+      <optgroup style="color:#0F0">
+        <option value="verde">Verde</option>
+      </optgroup>
+
+      <optgroup style="color:#FF0">
+        <option value="amarelo">Amarelo</option>
+      </optgroup>
+
+    </select>
+    </form>
+  </body>
+  </html>

@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"
+/>
+<title>Mascara de fone</title>
+  <script language="javascript" type="text/javascript">
+    function mascarafone(objeto) {
+      var aux;
+      aux = '(' + objeto.value.substr(0,2) + ")";
+      aux += objeto.value.substr(2,4)+"-" + objeto.value.substr(6,4);
+      objeto.value = aux;
+    }
+  </script>
+</head>
+<body>
+  <form name="form1">
+    <p>Número de telefone</p>
+  <input type="text" onblur="mascarafone(this);">
+</form>
+</body>
+</html>
