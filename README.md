@@ -1,5 +1,5 @@
 <p align="center">
-  <img src= ".git/ss.jpg" alt="Pequeno resumo" width="100%">
+  <img src= "./ss.jpg" alt="Pequeno resumo" width="100%">
 </p>
 
 ## 💻 Resumo
